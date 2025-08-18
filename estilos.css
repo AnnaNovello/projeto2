@@ -1,15 +1,22 @@
+/* Global box-sizing for easier layouts */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     color: pink;
     background: white;
-    margin: 0px;
-    font-family: "Chakra Petch", sans-serif;
+    margin: 0;
     margin-bottom: 100px;
+    font-family: "Chakra Petch", sans-serif;
 }
 
 header {
     display: flex;
     align-items: center;
-    border-bottom: solid 2px rgb(45, 125, 228);
+    border-bottom: 2px solid rgb(45, 125, 228);
     padding: 20px;
     font-size: 32px;
     color: rgb(45, 125, 228);
@@ -22,8 +29,7 @@ header {
 
 .chamada {
     background: rgb(189, 176, 213);
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding: 80px 0;
     display: flex;
     justify-content: center;
 }
@@ -47,18 +53,18 @@ p {
 }
 
 .categoria {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
     margin-top: 50px;
 }
 
 .categoria-videos img {
     opacity: 0.5;
     height: 200px;
+    transition: opacity 0.2s, border 0.2s;
 }
 
 .categoria-videos img:hover {
-    opacity: 1.0;
+    opacity: 1;
     border: 3px solid green;
 }
 
